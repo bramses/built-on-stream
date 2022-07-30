@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "hello world stream 2.md",
+            "file": "_Projects/Built On Stream/README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "hello world stream 2.md",
+                "file": "_Projects/Built On Stream/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "hello world stream 2.md",
+                "file": "_Projects/Built On Stream/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "hello world stream 2.md"
+                "file": "_Projects/Built On Stream/README.md"
               }
             }
           },
@@ -138,14 +138,15 @@
   },
   "active": "021064ab87e49059",
   "lastOpenFiles": [
-    "hello world stream.md",
+    "_Projects/Built On Stream/hello world stream 2.md",
+    "Templates/Daily Template.md",
+    "_Projects/Built On Stream/README.md",
+    "_Projects/Untitled.md",
+    "Daily/2022-07-29.md",
+    "Templates/Weekly Template.md",
+    "_Projects/Built On Stream/hello world stream.md",
     "Business Model.md",
     "Inspiration.md",
-    "_Projects/Untitled.md",
-    "Templates/Stream Template.md",
-    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
-    "a6000.md",
-    "Webcam.md",
-    "world.md"
+    "Templates/Stream Template.md"
   ]
 }
