@@ -1,5 +1,0 @@
-# Topic
-
-# Resources
-
-# Helpful Chatters

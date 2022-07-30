@@ -10,8 +10,11 @@ the hello world stream is a setup stream and is super duper scuffed, but the goa
 	[blue yeti](https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6380/6380464_sd.jpg)
 - [ ] [[Webcam]]
 - [ ] second monitor
+	- [x] delivered ✅ 2022-07-29
+	- [ ] setup
 
 ## Software
+### todo/software todo/projects/built-on-stream
 - [Twitch](https://www.twitch.tv/)
 	- streams
 	- alternatives:
@@ -25,20 +28,13 @@ the hello world stream is a setup stream and is super duper scuffed, but the goa
 - d3 type components, similar to [The Pudding](https://pudding.cool/)
 - [GitHub: Where the world builds software · GitHub](https://github.com/)
 	- `built-on-stream` is hosted
-- OBS
+- OBS [[2022-07-29]]
 	- [ ] transitions between scenes
-	- [ ] chat displayed on stream
-
-## Etc
+	- [x] chat displayed on stream ✅ 2022-07-29
 - [ ] fun, memorable catch phrases and community links
 
 [[Business Model]]
-
 [[Inspiration]]
-
-
-
-
 
 # Helpful Chatters
 - ohyeahjoee
