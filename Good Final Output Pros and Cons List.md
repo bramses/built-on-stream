@@ -47,7 +47,7 @@
 - most data (visual, auditory, text (_optional_) of all of the final types
 	- does not work well if you are on a network that is throttled -- or cant deliver a ton of data
 - videos require takes (and takes are super repetitive)
-- requires the most editing
+- requires the most editing (which i do not know how to do as of [[2022-08-02]])
 - ton of competition in all verticals from 15sec (TikTok) all the way up to feature length movies
 - little customizability in the way of code and interactivity (offset by streaming, for example, [DougDoug - YouTube](https://www.youtube.com/channel/UClyGlKOhDUooPJFy4v_mqPg))
 - have to play on big platforms to make it worth it -- and the baggage that comes with that (_regular social media baggage + fear of being kicked off + algorithm destroying you + [self worth distilled into a number on a screen_](https://youtu.be/c3xSJuoUnN8))
