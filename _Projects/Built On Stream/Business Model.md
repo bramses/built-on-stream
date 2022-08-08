@@ -18,6 +18,9 @@ in parallel, upload vods to yt, as well as clips of fun interactions -> bring pe
 
 ![[Drawing 2022-07-28 21.34.33.excalidraw]]
 ### carbon cycle
+
+^e7e6b8
+
 [carbon cycle - Google Search](https://www.google.com/search?q=carbon+cycle&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi11p2bg535AhXHJrkGHZ3nB6sQ_AUoAXoECAIQAw&biw=1920&bih=927&dpr=1#imgrc=QoaNP5YbmjfClM)
 
 ![](https://www.sciencefacts.net/wp-content/uploads/2020/02/Carbon-Cycle-Diagram.jpg)
