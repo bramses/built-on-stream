@@ -1,0 +1,1 @@
+The brain is a well of ideas whether we desire for it to be or not. As an associative machine, the brain's cardinal goal is to make associations. These associations can go on to influence other brains through communication, or stay bouncing around in the skull of the creator. Set ideas free, and help the species grow as other ideas have helped you grow into the person you are.
