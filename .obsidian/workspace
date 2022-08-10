@@ -134,10 +134,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 282.5
   },
-  "active": "1b18915b6cb7d72b",
+  "active": "f4caba85c53c8e89",
   "lastOpenFiles": [
+    "Daily/Untitled.md",
+    "Daily/2022-08-09.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Daily/2022-08-08.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
@@ -145,8 +147,6 @@
     "Daily/2022-07-28.md",
     "Templates/Stream Template.md",
     "Templates/Weekly Template.md",
-    "Templates/Daily Template.md",
-    "_Projects/Built On Stream/README.md",
-    "_Projects/Built On Stream/hello world stream.md"
+    "Templates/Daily Template.md"
   ]
 }
