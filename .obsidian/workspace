@@ -18,11 +18,10 @@
         "id": "f34a0ae435583502",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diff-view",
           "state": {
-            "file": "Daily/2022-08-09.md",
-            "mode": "source",
-            "source": false
+            "file": "conflict-files-obsidian-git.md",
+            "staged": false
           }
         }
       }
@@ -88,7 +87,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,9 +124,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Daily/2022-08-09.md"
-              }
+              "state": {}
             }
           },
           {
@@ -155,10 +150,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f34a0ae435583502",
+  "active": "73ff35ded06e7763",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Daily/2022-08-09.md",
+    "conflict-files-obsidian-git.md",
     "Daily/2022-08-08.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
