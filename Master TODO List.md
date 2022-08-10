@@ -1,4 +1,4 @@
-# [[README|Built on Stream]]
+# [[_Projects/Built On Stream/README|Built on Stream]]
 
 ```tasks
 not done

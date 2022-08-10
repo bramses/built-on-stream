@@ -4,24 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "a75ed239f8fe0d79",
+        "id": "705531cf58640e1b",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
+          "type": "markdown",
           "state": {
             "file": "Daily/2022-08-09.md",
-            "staged": false
-          }
-        }
-      },
-      {
-        "id": "f34a0ae435583502",
-        "type": "leaf",
-        "state": {
-          "type": "diff-view",
-          "state": {
-            "file": "conflict-files-obsidian-git.md",
-            "staged": false
+            "mode": "preview",
+            "source": true
           }
         }
       }
@@ -87,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Daily/2022-08-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Daily/2022-08-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Daily/2022-08-09.md"
+              }
             }
           },
           {
@@ -142,6 +136,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "90f1c69a074993e8",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {}
+            }
           }
         ],
         "currentTab": 4
@@ -150,17 +152,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "73ff35ded06e7763",
+  "active": "f4caba85c53c8e89",
   "lastOpenFiles": [
+    "_Projects/Base Ten Base Twotorial/README.md",
     "Daily/2022-08-09.md",
+    "Daily/an explanation of how we moved from base ten to base two.md",
+    "Templates/Daily Template.md",
     "conflict-files-obsidian-git.md",
     "Daily/2022-08-08.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
     "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.png",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.png",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-08 23.01.08.excalidraw.md"
+    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.png"
   ]
 }

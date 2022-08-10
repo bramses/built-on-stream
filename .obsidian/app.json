@@ -2,5 +2,6 @@
   "spellcheck": true,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "Attachments",
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "legacyEditor": false
 }

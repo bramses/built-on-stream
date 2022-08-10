@@ -2,7 +2,7 @@
 
 # Goals for the Stream
 
-## Topic
+# Topic
 
 # Resources
 

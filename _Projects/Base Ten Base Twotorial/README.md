@@ -1,0 +1,8 @@
+- ==**[[an explanation of how we moved from base ten to base two]]**==
+	- outline:
+		- count your fingers
+		- an intro to 1 and 0
+		- switches (a visual)
+		- the rise of computers
+		- **takeaway: people should be able to know how to think about binary**
+		- extra credit: bit shifting
