@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1c72e5b2856bdbfa",
+        "id": "a75ed239f8fe0d79",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-09.md",
+            "file": "conflict-files-obsidian-git.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-09.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-09.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-09.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -144,10 +144,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "1c72e5b2856bdbfa",
+  "active": "a75ed239f8fe0d79",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Daily/2022-08-09.md",
+    "conflict-files-obsidian-git.md",
     "Daily/2022-08-08.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
