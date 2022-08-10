@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-08.md",
+            "file": "Daily/2022-08-09.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-08.md",
+                "file": "Daily/2022-08-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-08.md",
+                "file": "Daily/2022-08-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-08.md"
+                "file": "Daily/2022-08-09.md"
               }
             }
           },
@@ -146,6 +146,7 @@
   },
   "active": "1c72e5b2856bdbfa",
   "lastOpenFiles": [
+    "Daily/2022-08-08.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
     "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
@@ -154,7 +155,6 @@
     "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
     "Excalidraw/Drawing 2022-08-08 23.01.08.excalidraw.md",
     "_Projects/Built On Stream/Justin Kan.md",
-    "_Projects/Built On Stream/Detritus.md",
-    "Templates/Daily Template.md"
+    "_Projects/Built On Stream/Detritus.md"
   ]
 }
