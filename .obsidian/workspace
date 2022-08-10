@@ -7,9 +7,20 @@
         "id": "a75ed239f8fe0d79",
         "type": "leaf",
         "state": {
+          "type": "diff-view",
+          "state": {
+            "file": "Daily/2022-08-09.md",
+            "staged": false
+          }
+        }
+      },
+      {
+        "id": "f34a0ae435583502",
+        "type": "leaf",
+        "state": {
           "type": "markdown",
           "state": {
-            "file": "conflict-files-obsidian-git.md",
+            "file": "Daily/2022-08-09.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Daily/2022-08-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Daily/2022-08-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Daily/2022-08-09.md"
               }
             }
           },
@@ -144,10 +155,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "a75ed239f8fe0d79",
+  "active": "f34a0ae435583502",
   "lastOpenFiles": [
-    "Daily/2022-08-09.md",
     "conflict-files-obsidian-git.md",
+    "Daily/2022-08-09.md",
     "Daily/2022-08-08.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
     "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
