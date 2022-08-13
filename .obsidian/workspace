@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "705531cf58640e1b",
+        "id": "af7ba311fab3cb6c",
         "type": "leaf",
+        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-13.md",
+            "file": "_Projects/Built On Stream/Video Presentation.md",
             "mode": "source",
             "source": false
-          }
+          },
+          "pinned": true
         }
       }
     ],
@@ -61,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-13.md",
+                "file": "_Projects/Built On Stream/Video Presentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-13.md",
+                "file": "_Projects/Built On Stream/Video Presentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-13.md"
+                "file": "_Projects/Built On Stream/Video Presentation.md"
               }
             }
           },
@@ -153,17 +154,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "705531cf58640e1b",
+  "active": "af7ba311fab3cb6c",
   "lastOpenFiles": [
-    "Attachments/removebg.md",
-    "Attachments/Pasted Image 20220802231108_373.jpg",
-    "Attachments/Pasted Image 20220802225809_911.jpg",
-    "Attachments/notetierlist.png",
-    "Attachments/output_2022-08-13T22_36_40_580Z.png",
-    "Attachments/output_2022-08-13T22_38_22_606Z 1.png",
-    "Attachments/output_2022-08-13T22_38_22_606Z.png",
-    "remove bg.md",
-    "Daily/an explanation of how we moved from base ten to base two.md",
-    "Daily/2022-08-13.md"
+    "Daily/2022-08-09.md",
+    "_Projects/Built On Stream/Video Presentation.md",
+    "Daily/2022-08-13.md",
+    "Excalidraw/Drawing 2022-08-07 19.46.45.excalidraw.md",
+    "Excalidraw/Drawing 2022-07-29 22.33.19.excalidraw.md",
+    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
+    "Excalidraw/brb.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.png",
+    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.png"
   ]
 }
