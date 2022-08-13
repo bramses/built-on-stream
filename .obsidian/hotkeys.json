@@ -14,23 +14,5 @@
       ],
       "key": "ArrowRight"
     }
-  ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "B"
-    }
-  ],
-  "app:toggle-right-sidebar": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "H"
-    }
   ]
 }

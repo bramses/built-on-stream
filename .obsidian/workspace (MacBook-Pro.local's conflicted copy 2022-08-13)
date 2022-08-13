@@ -11,7 +11,7 @@
           "state": {
             "file": "Daily/2022-08-13.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -155,15 +155,15 @@
   },
   "active": "705531cf58640e1b",
   "lastOpenFiles": [
-    "Attachments/removebg.md",
-    "Attachments/Pasted Image 20220802231108_373.jpg",
-    "Attachments/Pasted Image 20220802225809_911.jpg",
-    "Attachments/notetierlist.png",
-    "Attachments/output_2022-08-13T22_36_40_580Z.png",
-    "Attachments/output_2022-08-13T22_38_22_606Z 1.png",
-    "Attachments/output_2022-08-13T22_38_22_606Z.png",
-    "remove bg.md",
+    "Daily/2022-08-09.md",
+    "_Projects/Base Ten Base Twotorial/README.md",
     "Daily/an explanation of how we moved from base ten to base two.md",
-    "Daily/2022-08-13.md"
+    "Templates/Daily Template.md",
+    "conflict-files-obsidian-git.md",
+    "Daily/2022-08-08.md",
+    "_Projects/Built On Stream/Built on Stream Draft.md",
+    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.md",
+    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.png"
   ]
 }
