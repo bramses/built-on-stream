@@ -63,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -156,15 +157,15 @@
   },
   "active": "af7ba311fab3cb6c",
   "lastOpenFiles": [
-    "Daily/2022-08-09.md",
+    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
     "_Projects/Built On Stream/Video Presentation.md",
+    "_Projects/Built On Stream/Built on Stream Draft.md",
     "Daily/2022-08-13.md",
     "Excalidraw/Drawing 2022-08-07 19.46.45.excalidraw.md",
+    "Daily/2022-08-09.md",
     "Excalidraw/Drawing 2022-07-29 22.33.19.excalidraw.md",
     "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
     "Excalidraw/brb.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.png",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-07 20.44.04.excalidraw.png"
+    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.png"
   ]
 }
