@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "af7ba311fab3cb6c",
+        "id": "e565117945eac0f6",
         "type": "leaf",
-        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_Projects/Built On Stream/Video Presentation.md",
+            "file": "Daily/2022-08-15.md",
             "mode": "source",
             "source": false
-          },
-          "pinned": true
+          }
         }
       }
     ],
@@ -80,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Projects/Built On Stream/Video Presentation.md",
+                "file": "Daily/2022-08-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Projects/Built On Stream/Video Presentation.md",
+                "file": "Daily/2022-08-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Projects/Built On Stream/Video Presentation.md"
+                "file": "Daily/2022-08-15.md"
               }
             }
           },
@@ -155,17 +153,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "af7ba311fab3cb6c",
+  "active": "e565117945eac0f6",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
     "_Projects/Built On Stream/Video Presentation.md",
+    "Daily/2022-08-15.md",
+    "_Resources/Stream Assets.md",
+    "_Projects/Base Ten Base Twotorial/README.md",
+    "_Projects/Built On Stream/Business Model.md",
+    "_Projects/Built On Stream/Detritus.md",
+    "_Projects/Built On Stream/first ever day in my life.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
-    "Daily/2022-08-13.md",
-    "Excalidraw/Drawing 2022-08-07 19.46.45.excalidraw.md",
-    "Daily/2022-08-09.md",
-    "Excalidraw/Drawing 2022-07-29 22.33.19.excalidraw.md",
-    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
-    "Excalidraw/brb.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.png"
+    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
+    "Daily/2022-08-13.md"
   ]
 }

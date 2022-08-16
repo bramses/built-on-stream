@@ -29,3 +29,5 @@
 ![[DALL·E 2022-08-09 01.50.12 - an oil painting of a man sitting on a grassy knoll, looking out at a volcanic landscape, back turned to the camera.png]]
 
 ![[DALL·E 2022-08-09 02.02.20.png]]
+
+![[output_2022-08-16T01_00_37_699Z.png]]
