@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e565117945eac0f6",
+        "id": "cf3d31c3f6165fdd",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-15.md",
+            "file": "Daily/2022-08-17.md",
             "mode": "source",
             "source": false
           }
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-15.md",
+                "file": "Daily/2022-08-17.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-15.md",
+                "file": "Daily/2022-08-17.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-15.md"
+                "file": "Daily/2022-08-17.md"
               }
             }
           },
@@ -153,17 +152,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e565117945eac0f6",
+  "active": "cf3d31c3f6165fdd",
   "lastOpenFiles": [
-    "_Projects/Built On Stream/Video Presentation.md",
+    "Daily/2022-08-09.md",
+    "Daily/2022-08-13.md",
     "Daily/2022-08-15.md",
-    "_Resources/Stream Assets.md",
-    "_Projects/Base Ten Base Twotorial/README.md",
-    "_Projects/Built On Stream/Business Model.md",
-    "_Projects/Built On Stream/Detritus.md",
-    "_Projects/Built On Stream/first ever day in my life.md",
+    "Daily/2022-08-17.md",
+    "Excalidraw/Drawing 2022-08-17 22.33.38.excalidraw.md",
+    "_Projects/Built On Stream/Video Presentation.md",
     "_Projects/Built On Stream/Built on Stream Draft.md",
-    "Excalidraw/Drawing 2022-08-07 20.54.55.excalidraw.md",
-    "Daily/2022-08-13.md"
+    "_Projects/Base Ten Base Twotorial/History of the Binary System.md",
+    "_Projects/Base Ten Base Twotorial/malding at nim.md",
+    "_Projects/Base Ten Base Twotorial/an explanation of how we moved from base ten to base two.md"
   ]
 }

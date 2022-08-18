@@ -1,7 +1,5 @@
 {
   "cssTheme": "Minimal",
-  "enabledCssSnippets": [
-    "slides-fix"
-  ],
+  "enabledCssSnippets": [],
   "baseFontSize": 30
 }

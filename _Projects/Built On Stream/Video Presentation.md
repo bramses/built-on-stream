@@ -58,11 +58,12 @@ You want **non linearity**
 
 ---
 
-# The Thing Is...You *DO* Need to Post
+#### The Thing Is...You *DO* Need to Post
 
 You want **non linearity**
 
-![[Pasted image 20220813181326.png||500x500]] 
+
+![[Pasted image 20220813181326.png|400x400]] 
 
 
 ---
@@ -91,7 +92,7 @@ Most of your work will live at zero, but the outliers will skyrocket meaning the
 
 ---
 
-![[Pasted image 20220813220437.png]]
+![[Pasted image 20220813220437.png|820x620]]
 
 ---
 
@@ -182,8 +183,6 @@ Who does this really well? Who can we learn from? Who has mastered the **art of 
 ![[Pasted image 20220813182204.png|500x70%]]
 
 ---
-
-#### Live Stream is Basically Improv for Stuff You Already Do
 
 1) go live
 2) say whatever is on your mind/do something you've prepared/do something unprepared

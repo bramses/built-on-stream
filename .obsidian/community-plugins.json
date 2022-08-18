@@ -6,12 +6,16 @@
   "periodic-notes",
   "obsidian-tasks-plugin",
   "nldates-obsidian",
-  "oz-image-plugin",
   "table-editor-obsidian",
   "url-into-selection",
   "obsidian-emoji-toolbar",
   "obsidian-wikipedia",
   "obsidian-outliner",
   "obsidian-dice-roller",
-  "obsidian-advanced-slides"
+  "obsidian-advanced-slides",
+  "obsidian-footnotes",
+  "better-fn",
+  "auto-note-mover",
+  "note-refactor-obsidian",
+  "oz-image-plugin"
 ]
