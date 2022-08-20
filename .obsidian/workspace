@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-17.md",
+            "file": "Daily/2022-08-19.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-17.md",
+                "file": "Daily/2022-08-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-17.md",
+                "file": "Daily/2022-08-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-17.md"
+                "file": "Daily/2022-08-19.md"
               }
             }
           },
@@ -154,15 +154,15 @@
   },
   "active": "cf3d31c3f6165fdd",
   "lastOpenFiles": [
-    "Daily/2022-08-09.md",
-    "Daily/2022-08-13.md",
-    "Daily/2022-08-15.md",
-    "Daily/2022-08-17.md",
-    "Excalidraw/Drawing 2022-08-17 22.33.38.excalidraw.md",
-    "_Projects/Built On Stream/Video Presentation.md",
-    "_Projects/Built On Stream/Built on Stream Draft.md",
-    "_Projects/Base Ten Base Twotorial/History of the Binary System.md",
+    "_Projects/Base Ten Base Twotorial/Draft.md",
+    "_Projects/Base Ten Base Twotorial/Leibniz.md",
+    "_Projects/Base Ten Base Twotorial/README.md",
+    "_Projects/Base Ten Base Twotorial/A Brief History of Numbers.md",
+    "_Projects/Base Ten Base Twotorial/Research MOC.md",
     "_Projects/Base Ten Base Twotorial/malding at nim.md",
-    "_Projects/Base Ten Base Twotorial/an explanation of how we moved from base ten to base two.md"
+    "_Projects/Base Ten Base Twotorial/History of the Binary System.md",
+    "_Projects/Base Ten Base Twotorial/George Boole.md",
+    "_Projects/Base Ten Base Twotorial/ENIAC.md",
+    "_Projects/Base Ten Base Twotorial/Claude Shannon.md"
   ]
 }

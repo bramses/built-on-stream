@@ -2,9 +2,9 @@ Link: [A Brief History of Numbers: How 0-9 Were Invented](https://education.casi
 
 - humans in the Paleolithic era counted using tally marks
 ![[Pasted image 20220817220152.png]]
-- Greeks, Egyptians, etc all also used tallys
+- ==Greeks, Egyptians, etc all also used tallys==
 	- in ancient egypt, a coiled rope == 100 and a water lily == 1000
-- this method was cumbersome, so humans created a positional system allowing reuse of the same symbols but their **position meant something**
+- this method was cumbersome, so ==humans created a positional system allowing reuse of the same symbols but their **position meant something**==
 - Babylonians, Chinese, and Aztecs figured out independently
 - By 7th century Indian mathematicians have created decimal system ^[[[History of the Binary System#^b10c4d|was not in Europe until 1202?]]] [^1]
 - the number 0

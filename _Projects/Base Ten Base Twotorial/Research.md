@@ -1,2 +1,0 @@
-- [[A Brief History of Numbers]]
-- [[History of the Binary System]]
