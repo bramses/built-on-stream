@@ -1,7 +1,7 @@
 # One Dude's Hobby is Eight Billion People's Treasure
 
 ---
-### Leibniz
+### Leibniz (and his philosophy hobby)
 
 ![[Pasted image 20220825223729.png|620x500]]
 1646 -  1716
@@ -105,17 +105,19 @@ after reading the I-Ching, Leibniz saw the hexagrams as affirmation of his unive
 1815-1864
 
 ---
-### Boolin'
+### Boolin'*more needed
 
 <split even>
 ![[Pasted image 20220825232553.png]]
 
-- created formal boolean logic
+- created formal boolean algebra
+- self taught, knew multiple languages (Autodidacticism)
+- created his own school at age 19
 </split>
  
 ---
 
-### Inspired by Leibniz?
+### Inspired by Leibniz
 
 + **Mary Everest Boole, e.g., wrote that her husband, having been informed of Leibniz’s anticipations of his own logic, felt “as if Leibnitz had come and shaken hands with him across the centuries”**
 
@@ -135,8 +137,15 @@ after reading the I-Ching, Leibniz saw the hexagrams as affirmation of his unive
 
 ---
 ### Claude Shannons (Super Important) College Paper
-+  introduced to work of Boole in college and four years later (1936) was working on Bush's Diff Analyzer
-+ realized hat electrical applications of Boolean algebra could construct any logical numerical relationship
+<split even>
+![[Pasted image 20220826231509.png]]
+- introduced to work of Boole in college and four years later (1936) was working on Bush's Diff Analyzer
+</split>
+
+---
+### Claude Shannons (Super Important) College Paper
+
++ realized that electrical applications of Boolean algebra could construct any logical numerical relationship
 + in other words, on off electrical switches could be **any number** or **any logical statement**
 + **fundamental concept of computing**
 
@@ -163,10 +172,10 @@ after reading the I-Ching, Leibniz saw the hexagrams as affirmation of his unive
 
 ---
 
-- Fu Xi wrote the I Ching, saying reality was entirely made up of fulgurations of Yin and Yang, and that all of reality is held within the 64 hexagrams
-+ Thousands of years later, Leibniz read the I Ching after inventing calculus and converted binary from a religious, philosophical concept into a mathematical one
-+ Hundreds of years later, Boole used binary to formulate a new branch of mathematics
-+ A hundred years after that Shannon turned boolean logic into real life electrical signals and an extremely fast form of communicating
+- Fu Xi wrote the **I Ching**, saying reality was entirely made up of fulgurations of Yin and Yang, and that all of reality is held within the 64 hexagrams
++ Thousands of years later, **Leibniz** read the I Ching after inventing calculus and converted binary from a religious, philosophical concept into a mathematical one
++ Hundreds of years later, **Boole** used binary to formulate a new branch of mathematics
++ A hundred years after that **Shannon** turned boolean logic into real life electrical signals and an extremely fast form of communicating
 
 ---
 
@@ -174,7 +183,7 @@ after reading the I-Ching, Leibniz saw the hexagrams as affirmation of his unive
 
 ---
 
-*insert funny tiktok video here*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OayS6rMOR-A?start=34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

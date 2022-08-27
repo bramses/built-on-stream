@@ -4,25 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "0ec1d6c876802421",
+        "id": "d86f98bb1091800c",
         "type": "leaf",
-        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md",
+            "file": "Daily/2022-08-26.md",
             "mode": "source",
             "source": false
-          },
-          "pinned": true
-        }
-      },
-      {
-        "id": "8c553e482960533c",
-        "type": "leaf",
-        "state": {
-          "type": "reveal-preview-view",
-          "state": {}
+          }
         }
       }
     ],
@@ -67,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -88,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md",
+                "file": "Daily/2022-08-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md",
+                "file": "Daily/2022-08-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md"
+                "file": "Daily/2022-08-26.md"
               }
             }
           },
@@ -163,17 +152,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "8c553e482960533c",
+  "active": "d86f98bb1091800c",
   "lastOpenFiles": [
-    "_Projects/Built On Stream/Video Presentation.md",
     "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md",
+    "FleetingNotes/Claude Shannon was hired as a research assistant in 1936 to run the differential analyzer in Bush's lab.md",
+    "FleetingNotes/how to build connections in Fleeting Notes.md",
+    "Excalidraw/Drawing 2022-08-25 22.47.50.excalidraw.png",
+    "_Projects/Built On Stream/Video Presentation.md",
+    "Daily/2022-08-26.md",
+    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
+    "Daily/2022-08-25.md",
     "_Projects/Built On Stream/Create a flywheel.md",
-    "_Projects/Built On Stream/Companies of one.md",
-    "_Projects/Base Ten Base Twotorial/Claude Shannon.md",
-    "Excalidraw/dg.png",
-    "Excalidraw/Drawing 2022-08-25 23.39.03.excalidraw.md",
-    "_Projects/Base Ten Base Twotorial/Draft.md",
-    "_Projects/Base Ten Base Twotorial/George Boole.md",
-    "_Projects/Base Ten Base Twotorial/Leibniz.md"
+    "_Projects/Built On Stream/Companies of one.md"
   ]
 }
