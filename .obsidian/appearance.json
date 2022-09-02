@@ -1,5 +1,6 @@
 {
   "cssTheme": "Minimal",
   "enabledCssSnippets": [],
-  "baseFontSize": 30
+  "baseFontSize": 30,
+  "theme": "obsidian"
 }

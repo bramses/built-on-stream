@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "d86f98bb1091800c",
+        "id": "9d39555661a7802e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-08-31.md",
+            "file": "Daily/2022-09-01.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mathmet",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,12 +57,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-08-31.md",
+                "file": "Daily/2022-09-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-08-31.md",
+                "file": "Daily/2022-09-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-08-31.md"
+                "file": "Daily/2022-09-01.md"
               }
             }
           },
@@ -153,17 +153,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "d86f98bb1091800c",
+  "active": "9d39555661a7802e",
   "lastOpenFiles": [
-    "_Projects/Base Ten Base Twotorial/One Dude's Hobby Green Screen.md",
-    "Daily/2022-08-31.md",
-    "Daily/2022-08-30.md",
-    "_Projects/Base Ten Base Twotorial/One Dude's Hobby is Eight Billion People's Treasure.md",
-    "Daily/2022-08-29.md",
     "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
-    "Daily/2022-08-26.md",
-    "FleetingNotes/Claude Shannon was hired as a research assistant in 1936 to run the differential analyzer in Bush's lab.md",
-    "FleetingNotes/how to build connections in Fleeting Notes.md",
-    "Excalidraw/Drawing 2022-08-25 22.47.50.excalidraw.png"
+    "Daily/2022-09-01.md",
+    "_Projects/Base Ten Base Twotorial/A Brief History of Numbers.md",
+    "_Projects/Base Ten Base Twotorial/Draft.md",
+    "_Projects/Built On Stream/Video Presentation.md",
+    "Attachments/DALL·E 2022-08-09 01.50.12 - an oil painting of a man sitting on a grassy knoll, looking out at a volcanic landscape, back turned to the camera.png",
+    "Attachments/DALL·E 2022-08-09 01.51.25 - an oil painting of a man sitting on a grassy knoll, looking out at a post apocolyptic volcanic landscape, back turned to the camera.png",
+    "Attachments/DALL·E 2022-08-09 01.51.45 - an oil painting of a man sitting on a grassy knoll, looking out at a post apocolyptic volcanic landscape, back turned to the camera.png",
+    "Attachments/DALL·E 2022-08-09 01.57.07 - an oil painting of a man sitting with his back turned to the camera, looking out at a post apoctylptic volcanic, jupiter like landscaoe.png",
+    "Attachments/DALL·E 2022-08-09 01.57.18 - an oil painting of a man sitting with his back turned to the camera, looking out at a post apoctylptic volcanic, jupiter like landscaoe.png"
   ]
 }
