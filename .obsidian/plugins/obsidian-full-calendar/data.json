@@ -1,0 +1,12 @@
+{
+  "calendarSources": [
+    {
+      "type": "local",
+      "color": "#ff79c6",
+      "directory": "calendar/stream/live"
+    }
+  ],
+  "defaultCalendar": 0,
+  "recursiveLocal": false,
+  "firstDay": 0
+}

@@ -4,14 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "9d39555661a7802e",
+        "id": "582566da1821c5fe",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "excalidraw",
           "state": {
-            "file": "Daily/2022-09-01.md",
-            "mode": "source",
-            "source": false
+            "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md"
           }
         }
       }
@@ -40,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mathmet",
+                "query": "leibn",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-09-01.md",
+                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-09-01.md",
+                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-09-01.md"
+                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md"
               }
             }
           },
@@ -153,17 +151,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9d39555661a7802e",
+  "active": "582566da1821c5fe",
   "lastOpenFiles": [
+    "Daily/2022-09-02.md",
     "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
+    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
+    "calendar/stream/live/2022-09-02 obsidian presentation of discovery.md",
+    "calendar/stream/live/2022-09-02 vsc.md",
     "Daily/2022-09-01.md",
     "_Projects/Base Ten Base Twotorial/A Brief History of Numbers.md",
     "_Projects/Base Ten Base Twotorial/Draft.md",
     "_Projects/Built On Stream/Video Presentation.md",
-    "Attachments/DALL·E 2022-08-09 01.50.12 - an oil painting of a man sitting on a grassy knoll, looking out at a volcanic landscape, back turned to the camera.png",
-    "Attachments/DALL·E 2022-08-09 01.51.25 - an oil painting of a man sitting on a grassy knoll, looking out at a post apocolyptic volcanic landscape, back turned to the camera.png",
-    "Attachments/DALL·E 2022-08-09 01.51.45 - an oil painting of a man sitting on a grassy knoll, looking out at a post apocolyptic volcanic landscape, back turned to the camera.png",
-    "Attachments/DALL·E 2022-08-09 01.57.07 - an oil painting of a man sitting with his back turned to the camera, looking out at a post apoctylptic volcanic, jupiter like landscaoe.png",
-    "Attachments/DALL·E 2022-08-09 01.57.18 - an oil painting of a man sitting with his back turned to the camera, looking out at a post apoctylptic volcanic, jupiter like landscaoe.png"
+    "Attachments/DALL·E 2022-08-09 01.50.12 - an oil painting of a man sitting on a grassy knoll, looking out at a volcanic landscape, back turned to the camera.png"
   ]
 }
