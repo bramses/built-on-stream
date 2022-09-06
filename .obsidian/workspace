@@ -4,12 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "582566da1821c5fe",
+        "id": "2d15da0f2c452d88",
         "type": "leaf",
         "state": {
-          "type": "excalidraw",
+          "type": "markdown",
           "state": {
-            "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md"
+            "file": "Daily/2022-09-05.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -55,12 +57,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -76,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
+                "file": "Daily/2022-09-05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
+                "file": "Daily/2022-09-05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md"
+                "file": "Daily/2022-09-05.md"
               }
             }
           },
@@ -151,17 +153,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "582566da1821c5fe",
+  "active": "2d15da0f2c452d88",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2022-09-05 22.34.04.excalidraw.md",
+    "Daily/2022-09-05.md",
+    "Excalidraw/Drawing 2022-09-05 22.21.36.excalidraw.md",
     "Daily/2022-09-02.md",
     "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
     "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md",
     "calendar/stream/live/2022-09-02 obsidian presentation of discovery.md",
     "calendar/stream/live/2022-09-02 vsc.md",
     "Daily/2022-09-01.md",
-    "_Projects/Base Ten Base Twotorial/A Brief History of Numbers.md",
-    "_Projects/Base Ten Base Twotorial/Draft.md",
-    "_Projects/Built On Stream/Video Presentation.md",
-    "Attachments/DALL·E 2022-08-09 01.50.12 - an oil painting of a man sitting on a grassy knoll, looking out at a volcanic landscape, back turned to the camera.png"
+    "_Projects/Base Ten Base Twotorial/A Brief History of Numbers.md"
   ]
 }
