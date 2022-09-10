@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-09-07.md",
+            "file": "Daily/2022-09-10.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-09-07.md",
+                "file": "Daily/2022-09-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-09-07.md",
+                "file": "Daily/2022-09-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-09-07.md"
+                "file": "Daily/2022-09-10.md"
               }
             }
           },
@@ -154,15 +155,15 @@
   },
   "active": "2d15da0f2c452d88",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2022-09-09 23.44.53.excalidraw.md",
+    "Daily/2022-09-09.md",
+    "Daily/2022-09-07.md",
     "Excalidraw/Drawing 2022-08-29 21.22.31.excalidraw.md",
     "Excalidraw/Drawing 2022-09-05 22.21.36.excalidraw.md",
     "Excalidraw/Drawing 2022-09-05 22.34.04.excalidraw.md",
-    "Daily/2022-09-07.md",
     "Templates/test template list.md",
     "Templates/test template list wrapper.md",
     "Templates/Daily Template.md",
-    "Daily/2022-09-05.md",
-    "Daily/2022-09-02.md",
-    "Excalidraw/Drawing 2022-07-28 21.34.33.excalidraw.md"
+    "Daily/2022-09-05.md"
   ]
 }
