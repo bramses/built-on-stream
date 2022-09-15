@@ -2,7 +2,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-auto-link-title",
   "templater-obsidian",
-  "obsidian-git",
   "periodic-notes",
   "obsidian-tasks-plugin",
   "nldates-obsidian",
@@ -20,5 +19,6 @@
   "oz-image-plugin",
   "fleeting-notes-obsidian",
   "obsidian-minimal-settings",
-  "obsidian-full-calendar"
+  "obsidian-full-calendar",
+  "obsidian-git"
 ]
