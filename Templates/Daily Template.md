@@ -1,8 +1,6 @@
 #daily
 
-# Goals for the Stream
-
-# Topic
+# Whats The Plan
 
 # Resources
 
