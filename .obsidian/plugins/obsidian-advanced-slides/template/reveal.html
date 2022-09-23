@@ -113,6 +113,11 @@
 	{{#enableChalkboard}}
 	<script src="{{{base}}}plugin/chalkboard/plugin.js"></script>
 	{{/enableChalkboard}}
+	{{#timeForPresentation}}
+	{{#enableTimeBar}}
+	<script src="{{{base}}}plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+	{{/enableTimeBar}}
+	{{/timeForPresentation}}
 
     <script>
       function extend() {
@@ -175,10 +180,27 @@
 		  {{#enableChalkboard}}
 		  RevealChalkboard, 
 		  {{/enableChalkboard}}
+		  {{#timeForPresentation}}
+		  {{#enableTimeBar}}
+		  ElapsedTimeBar
+		  {{/enableTimeBar}}
+		  {{/timeForPresentation}}
         ],
+
+
+		{{#timeForPresentation}}
+    	allottedTime: {{{.}}} * 1000,
+    	{{/timeForPresentation}}
 
 		mathjax3: {
 			mathjax: '{{{base}}}plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
 		},
 
 		{{#enableCustomControls}}
@@ -221,4 +243,6 @@
       Reveal.initialize(options);
     </script>
   </body>
+
+  <!-- created with {{! ignore me }}Advanced Slides -->
 </html>

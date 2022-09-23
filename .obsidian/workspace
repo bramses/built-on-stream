@@ -4,16 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "14bb23a9129622ee",
+        "id": "3c944a16d4738cb7",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/2022-09-17.md",
+            "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
             "mode": "source",
             "source": false
           }
-        }
+        },
+        "group": "3100ff494639cc9d"
+      },
+      {
+        "id": "2d0a34e78af81c12",
+        "type": "leaf",
+        "state": {
+          "type": "localgraph",
+          "state": {
+            "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+            "options": {
+              "collapse-filter": true,
+              "search": "",
+              "localJumps": 1,
+              "localBacklinks": true,
+              "localForelinks": true,
+              "localInterlinks": false,
+              "showTags": false,
+              "showAttachments": false,
+              "hideUnresolved": false,
+              "collapse-color-groups": true,
+              "colorGroups": [],
+              "collapse-display": true,
+              "showArrow": false,
+              "textFadeMultiplier": 0,
+              "nodeSizeMultiplier": 1,
+              "lineSizeMultiplier": 1,
+              "collapse-forces": true,
+              "centerStrength": 0.518713248970312,
+              "repelStrength": 10,
+              "linkStrength": 1,
+              "linkDistance": 250,
+              "scale": 1,
+              "close": false
+            }
+          }
+        },
+        "group": "3100ff494639cc9d"
       }
     ],
     "direction": "vertical"
@@ -40,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"✅ 2022-09-17\"",
+                "query": "tasks",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 299,
+    "collapsed": true
   },
   "right": {
     "id": "7330e3299be9b226",
@@ -77,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2022-09-17.md",
+                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2022-09-17.md",
+                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2022-09-17.md"
+                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md"
               }
             }
           },
@@ -138,7 +176,7 @@
             }
           },
           {
-            "id": "9476c7727a1fff75",
+            "id": "8deecd6e15373542",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -152,17 +190,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "14bb23a9129622ee",
+  "active": "8deecd6e15373542",
   "lastOpenFiles": [
-    "Daily/2022-09-14.md",
-    "Daily/2022-09-17.md",
-    "Excalidraw/Drawing 2022-09-17 17.32.53.excalidraw.md",
-    "Daily/show tasks.md",
-    "Master TODO List.md",
-    "Excalidraw/Drawing 2022-09-17 17.09.27.excalidraw.md",
-    "Daily/2022-09-07.md",
-    "Daily/2022-09-10.md",
-    "Templates/test template list.md",
-    "Templates/test template list wrapper.md"
+    "lets-get-to-the-bottom-of-this/references/The Power of Obsidian's Local Graph – The Sweet Setup.md",
+    "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+    "lets-get-to-the-bottom-of-this/presentation/excalidraw/Drawing 2022-09-22 21.19.17.excalidraw.md",
+    "Templates/Insight Template.md",
+    "Templates/Reference Template.md",
+    "lets-get-to-the-bottom-of-this/references/I Only Write When Inspiration Strikes. Fortunately It Strikes at Nine Every Morning – Quote Investigator.md",
+    "Templates/Folder Note Template.md",
+    "Daily/2022-07-29.md",
+    "lets-get-to-the-bottom-of-this/todos.md",
+    "lets-get-to-the-bottom-of-this/insights/Structure.md"
   ]
 }
