@@ -9,48 +9,11 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+            "file": "Daily/how i think about character choice.md",
             "mode": "source",
             "source": false
           }
-        },
-        "group": "3100ff494639cc9d"
-      },
-      {
-        "id": "2d0a34e78af81c12",
-        "type": "leaf",
-        "state": {
-          "type": "localgraph",
-          "state": {
-            "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
-            "options": {
-              "collapse-filter": true,
-              "search": "",
-              "localJumps": 1,
-              "localBacklinks": true,
-              "localForelinks": true,
-              "localInterlinks": false,
-              "showTags": false,
-              "showAttachments": false,
-              "hideUnresolved": false,
-              "collapse-color-groups": true,
-              "colorGroups": [],
-              "collapse-display": true,
-              "showArrow": false,
-              "textFadeMultiplier": 0,
-              "nodeSizeMultiplier": 1,
-              "lineSizeMultiplier": 1,
-              "collapse-forces": true,
-              "centerStrength": 0.518713248970312,
-              "repelStrength": 10,
-              "linkStrength": 1,
-              "linkDistance": 250,
-              "scale": 1,
-              "close": false
-            }
-          }
-        },
-        "group": "3100ff494639cc9d"
+        }
       }
     ],
     "direction": "vertical"
@@ -115,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+                "file": "Daily/how i think about character choice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+                "file": "Daily/how i think about character choice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md"
+                "file": "Daily/how i think about character choice.md"
               }
             }
           },
@@ -190,17 +153,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "2d0a34e78af81c12",
+  "active": "3c944a16d4738cb7",
   "lastOpenFiles": [
-    "lets-get-to-the-bottom-of-this/todos.md",
+    "Daily/2022-10-01.md",
     "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+    "lets-get-to-the-bottom-of-this/todos.md",
     "lets-get-to-the-bottom-of-this/references/The Power of Obsidian's Local Graph – The Sweet Setup.md",
     "lets-get-to-the-bottom-of-this/presentation/excalidraw/Drawing 2022-09-22 21.19.17.excalidraw.md",
     "Templates/Insight Template.md",
     "Templates/Reference Template.md",
     "lets-get-to-the-bottom-of-this/references/I Only Write When Inspiration Strikes. Fortunately It Strikes at Nine Every Morning – Quote Investigator.md",
     "Templates/Folder Note Template.md",
-    "Daily/2022-07-29.md",
-    "lets-get-to-the-bottom-of-this/insights/Structure.md"
+    "Daily/2022-07-29.md"
   ]
 }
