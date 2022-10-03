@@ -6,12 +6,24 @@
       {
         "id": "3c944a16d4738cb7",
         "type": "leaf",
+        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Daily/how i think about character choice.md",
+            "file": "Daily/2022-10-03.md",
             "mode": "source",
             "source": false
+          },
+          "pinned": true
+        }
+      },
+      {
+        "id": "e8ac8716cf56ac59",
+        "type": "leaf",
+        "state": {
+          "type": "excalidraw",
+          "state": {
+            "file": "Excalidraw/Drawing 2022-10-03 16.14.34.excalidraw.md"
           }
         }
       }
@@ -78,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/how i think about character choice.md",
+                "file": "Daily/2022-10-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/how i think about character choice.md",
+                "file": "Daily/2022-10-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/how i think about character choice.md"
+                "file": "Daily/2022-10-03.md"
               }
             }
           },
@@ -155,15 +167,15 @@
   },
   "active": "3c944a16d4738cb7",
   "lastOpenFiles": [
-    "Daily/2022-10-01.md",
+    "Excalidraw/Drawing 2022-10-03 16.14.34.excalidraw.md",
+    "Daily/2022-10-03.md",
     "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
-    "lets-get-to-the-bottom-of-this/todos.md",
     "lets-get-to-the-bottom-of-this/references/The Power of Obsidian's Local Graph – The Sweet Setup.md",
+    "Daily/how i think about character choice.md",
+    "Daily/2022-10-01.md",
+    "lets-get-to-the-bottom-of-this/todos.md",
     "lets-get-to-the-bottom-of-this/presentation/excalidraw/Drawing 2022-09-22 21.19.17.excalidraw.md",
     "Templates/Insight Template.md",
-    "Templates/Reference Template.md",
-    "lets-get-to-the-bottom-of-this/references/I Only Write When Inspiration Strikes. Fortunately It Strikes at Nine Every Morning – Quote Investigator.md",
-    "Templates/Folder Note Template.md",
-    "Daily/2022-07-29.md"
+    "Templates/Reference Template.md"
   ]
 }
