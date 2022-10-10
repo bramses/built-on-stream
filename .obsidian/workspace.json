@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "77dd24537b6bf7b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "2477fdbe2a167f25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41eb7ef1f45f5018",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2022-10-09 19.09.22.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "56fc7b25c7dd2015",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/2022-10-09.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1,
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e0a8c6617e87b6a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9128daf3a633323",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73ff35ded06e7763",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "08150915f90fcf88",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tasks",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "559355bd539479b2",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299,
+    "collapsed": true
+  },
+  "right": {
+    "id": "7330e3299be9b226",
+    "type": "split",
+    "children": [
+      {
+        "id": "23240e84d8ae6f71",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed46b45244c30bc5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Daily/2022-10-09.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "59b6dd442c37e67d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Daily/2022-10-09.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b36aa75ce8ebd59a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "153ddf9d3564a7c9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Daily/2022-10-09.md"
+              }
+            }
+          },
+          {
+            "id": "8a85716aadc1da99",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "90f1c69a074993e8",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {}
+            }
+          },
+          {
+            "id": "8deecd6e15373542",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 307.5
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "8deecd6e15373542",
+  "lastOpenFiles": [
+    "Daily/2022-10-09.md",
+    "Excalidraw/Drawing 2022-10-09 19.09.22.excalidraw.md",
+    "Excalidraw/Drawing 2022-10-09 18.47.39.excalidraw.md",
+    "Excalidraw/Drawing 2022-10-09 16.15.05.excalidraw.md",
+    "Daily/2022-10-03.md",
+    "Excalidraw/Drawing 2022-10-03 16.14.34.excalidraw.md",
+    "lets-get-to-the-bottom-of-this/lets-get-to-the-bottom-of-this.md",
+    "lets-get-to-the-bottom-of-this/references/The Power of Obsidian's Local Graph – The Sweet Setup.md",
+    "Daily/how i think about character choice.md",
+    "Daily/2022-10-01.md"
+  ]
+}
