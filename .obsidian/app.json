@@ -4,5 +4,6 @@
   "attachmentFolderPath": "Attachments",
   "newFileLocation": "current",
   "legacyEditor": false,
-  "fileSortOrder": "byModifiedTime"
+  "fileSortOrder": "byModifiedTime",
+  "autoConvertHtml": false
 }

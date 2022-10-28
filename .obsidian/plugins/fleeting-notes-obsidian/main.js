@@ -4299,341 +4299,53 @@ var require_crypto_js = __commonJS({
 __export(exports, {
   default: () => FleetingNotesPlugin
 });
+var import_obsidian4 = __toModule(require("obsidian"));
+
+// src/inputModal.ts
 var import_obsidian = __toModule(require("obsidian"));
-var CryptoJS = require_crypto_js();
+var InputModal = class extends import_obsidian.Modal {
+  constructor(app, title, inputLabel, onSubmit) {
+    super(app);
+    this.title = title;
+    this.inputLabel = inputLabel;
+    this.onSubmit = onSubmit;
+    this.result = "";
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.createEl("h1", { text: this.title });
+    new import_obsidian.Setting(contentEl).setName(this.inputLabel).addText((text) => text.onChange((value) => {
+      this.result = value;
+    }));
+    new import_obsidian.Setting(contentEl).addButton((btn) => btn.setButtonText("Submit").setCta().onClick(() => {
+      this.close();
+      if (this.result.length > 0) {
+        this.onSubmit(this.result);
+      }
+    }));
+  }
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
+  }
+};
+
+// src/settings.ts
+var import_obsidian2 = __toModule(require("obsidian"));
 var DEFAULT_SETTINGS = {
-  fleeting_notes_folder: "/",
-  note_template: '---\n# Metadata used for sync\nid: "${id}"\ntitle: "${title}"\ncreated: "${datetime}"\nsource: "${source}"\n---\n${content}',
+  auto_generate_title: false,
+  fleeting_notes_folder: "FleetingNotesApp",
+  note_template: '---\n# Metadata used for sync\nid: "${id}"\ntitle: "${title}"\n# Extracts all tags in content into the metadata\ntags: ${tags}\nsource: "${source}"\ncreated_date: "${created_date}"\nmodified_date: "${last_modified_date}"\n---\n${content}',
   sync_on_startup: false,
   last_sync_time: new Date(0),
   sync_type: "one-way",
+  notes_filter: "",
   username: "",
   password: "",
   encryption_key: "",
   sync_interval: void 0
 };
-var FleetingNotesPlugin = class extends import_obsidian.Plugin {
-  onload() {
-    return __async(this, null, function* () {
-      yield this.loadSettings();
-      this.addCommand({
-        id: "sync-fleeting-notes",
-        name: "Sync Notes with Fleeting Notes",
-        callback: () => __async(this, null, function* () {
-          this.syncFleetingNotes();
-        })
-      });
-      this.addCommand({
-        id: "get-unprocessed-notes",
-        name: "Insert Unprocessed Notes",
-        callback: () => __async(this, null, function* () {
-          this.insertUnprocessedNotes();
-        })
-      });
-      this.addSettingTab(new FleetingNotesSettingTab(this.app, this));
-      if (this.settings.sync_on_startup) {
-        this.app.workspace.onLayoutReady(() => {
-          this.autoSync();
-        });
-      }
-    });
-  }
-  disableAutoSync() {
-    if (this.settings.sync_interval) {
-      clearInterval(this.settings.sync_interval);
-    }
-  }
-  autoSync(syncIntervalMin = 30) {
-    const syncIntervalMs = syncIntervalMin * 60 * 1e3;
-    this.disableAutoSync();
-    this.syncFleetingNotes();
-    this.settings.sync_interval = setInterval(this.syncFleetingNotes.bind(this), syncIntervalMs);
-  }
-  onunload() {
-    this.disableAutoSync();
-  }
-  loadSettings() {
-    return __async(this, null, function* () {
-      this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
-    });
-  }
-  saveSettings() {
-    return __async(this, null, function* () {
-      yield this.saveData(this.settings);
-    });
-  }
-  insertUnprocessedNotes() {
-    return __async(this, null, function* () {
-      try {
-        const unprocessedNotes = yield this.getUnprocessedFleetingNotes(this.settings.fleeting_notes_folder);
-        const unprocessedNoteString = this.unprocessedNotesToString(unprocessedNotes, this.app.workspace.getActiveFile().path);
-        this.appendStringToActiveFile(unprocessedNoteString);
-      } catch (e) {
-        if (typeof e === "string") {
-          new import_obsidian.Notice(e);
-        } else {
-          console.error(e);
-          new import_obsidian.Notice("Failed to insert unprocessed notes");
-        }
-      }
-    });
-  }
-  syncFleetingNotes() {
-    return __async(this, null, function* () {
-      try {
-        if (this.settings.sync_type === "two-way") {
-          yield this.pushFleetingNotes();
-        }
-        let notes = yield getAllNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key);
-        notes = notes.filter((note) => !note._isDeleted);
-        yield this.writeNotes(notes, this.settings.fleeting_notes_folder);
-        if (this.settings.sync_type == "one-way-delete") {
-          yield this.deleteFleetingNotes(notes);
-        }
-        this.settings.last_sync_time = new Date();
-        new import_obsidian.Notice("Fleeting Notes sync success!");
-      } catch (e) {
-        if (typeof e === "string") {
-          new import_obsidian.Notice(e);
-        } else {
-          console.error(e);
-          new import_obsidian.Notice("Fleeing Notes sync failed - please check settings");
-        }
-      }
-    });
-  }
-  appendStringToActiveFile(content) {
-    return __async(this, null, function* () {
-      const active_view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
-      const editor = active_view.editor;
-      const doc = editor.getDoc();
-      doc.replaceSelection(content);
-    });
-  }
-  parseNoteFile(file) {
-    return __async(this, null, function* () {
-      var frontmatter = {};
-      var rawNoteContent = yield this.app.vault.read(file);
-      var content = rawNoteContent;
-      try {
-        var m = rawNoteContent.match(/^---\n([\s\S]*?)\n---\n/m);
-        if (m) {
-          frontmatter = (0, import_obsidian.parseYaml)(m[1]);
-          content = content.replace(m[0], "");
-        }
-      } catch (e) {
-        console.error(e, `Failed to parse metadata for: "${file.path}"`);
-      }
-      return { frontmatter, content };
-    });
-  }
-  pushFleetingNotes() {
-    return __async(this, null, function* () {
-      try {
-        var modifiedNotes = yield this.getUpdatedLocalNotes(this.settings.fleeting_notes_folder);
-        var formattedNotes = yield Promise.all(modifiedNotes.map((note) => __async(this, null, function* () {
-          var { file, frontmatter, content } = note;
-          return {
-            "_id": frontmatter.id,
-            "title": frontmatter.title ? file.basename : "",
-            "content": content || "",
-            "source": frontmatter.source || "",
-            "_isDeleted": frontmatter.deleted || false
-          };
-        })));
-        if (formattedNotes.length > 0) {
-          yield updateNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key, formattedNotes);
-          this.settings.last_sync_time = new Date();
-        }
-      } catch (e) {
-        throwError(e, "Failed to push notes from Obsidian to Fleeting Notes");
-      }
-    });
-  }
-  deleteFleetingNotes(notes) {
-    return __async(this, null, function* () {
-      try {
-        var notesToDelete = yield Promise.all(notes.map((note) => __async(this, null, function* () {
-          return {
-            "_id": note._id,
-            "_isDeleted": true
-          };
-        })));
-        if (notesToDelete.length > 0) {
-          yield updateNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key, notesToDelete);
-        }
-      } catch (e) {
-        throwError(e, "Failed to delete notes from Fleeting Notes");
-      }
-    });
-  }
-  getExistingFleetingNotes(dir) {
-    return __async(this, null, function* () {
-      const noteList = [];
-      try {
-        var files = this.app.vault.getFiles();
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-          var fileInDir = dir === "/" ? !file.path.contains("/") : file.path.startsWith(dir);
-          if (!fileInDir)
-            continue;
-          var file_id;
-          var { frontmatter, content } = yield this.parseNoteFile(file);
-          file_id = frontmatter.id || null;
-          if (file_id !== null) {
-            noteList.push({ file, frontmatter, content });
-          }
-        }
-      } catch (e) {
-        throwError(e, `Failed to get existing notes from obsidian`);
-      }
-      return noteList;
-    });
-  }
-  convertObsidianPath(path) {
-    path = path[0] === "/" ? path.replace("/", "") : path;
-    path = path || "/";
-    return path;
-  }
-  getFilledTemplate(template, note, add_deleted) {
-    const metadataMatch = template.match(/^---\n([\s\S]*?)\n---\n/m);
-    if (metadataMatch) {
-      const escapedTitle = note.title.replace(/\"/g, '\\"');
-      const escapedContent = note.content.replace(/\"/g, '\\"');
-      const escapedSource = note.source.replace(/\"/g, '\\"');
-      var newMetadata = metadataMatch[1].replace(/\$\{title\}/gm, escapedTitle).replace(/\$\{content\}/gm, escapedContent).replace(/\$\{source\}/gm, escapedSource);
-      if (add_deleted) {
-        const deleted_match = newMetadata.match(/^deleted:.*$/);
-        if (deleted_match) {
-          newMetadata = newMetadata.replace(deleted_match[0], "deleted: true");
-        } else {
-          newMetadata += "\ndeleted: true";
-        }
-      }
-      newMetadata = `---
-${newMetadata}
----
-`;
-      template = template.replace(metadataMatch[0], newMetadata);
-    }
-    var newTemplate = template.replace(/\$\{id\}/gm, note._id).replace(/\$\{title\}/gm, note.title).replace(/\$\{datetime\}/gm, note.timestamp.substring(0.1)).replace(/\$\{content\}/gm, note.content).replace(/\$\{source\}/gm, note.source);
-    return newTemplate;
-  }
-  getUpdatedLocalNotes(folder) {
-    return __async(this, null, function* () {
-      folder = this.convertObsidianPath(folder);
-      var existingNotes = yield this.getExistingFleetingNotes(folder);
-      var modifiedNotes = existingNotes.filter((note) => {
-        const { file, frontmatter } = note;
-        const isContentModified = new Date(file.stat.mtime) > this.settings.last_sync_time;
-        const isTitleChanged = frontmatter.title && frontmatter.title !== file.basename;
-        return isContentModified || isTitleChanged;
-      });
-      return modifiedNotes;
-    });
-  }
-  unprocessedNotesToString(notes, sourcePath) {
-    let unprocessedNoteString = "";
-    const unprocessedNoteTemplate = "- [ ] ![[${linkText}]]\n";
-    notes.forEach((note) => {
-      const linkText = this.app.metadataCache.fileToLinktext(note.file, sourcePath);
-      unprocessedNoteString += unprocessedNoteTemplate.replace("${linkText}", linkText);
-    });
-    return unprocessedNoteString;
-  }
-  getUnprocessedFleetingNotes(folder) {
-    return __async(this, null, function* () {
-      folder = this.convertObsidianPath(folder);
-      let existingNotePathMap = new Map();
-      var existingNotes = yield this.getExistingFleetingNotes(folder);
-      existingNotes.forEach((note) => existingNotePathMap.set(note.file.path, note));
-      let skipNotesSet = new Set();
-      const resolvedLinks = this.app.metadataCache.resolvedLinks;
-      yield Promise.all(Object.keys(resolvedLinks).map((filePath) => __async(this, null, function* () {
-        if (existingNotePathMap.has(filePath))
-          return;
-        let linksInNote = [];
-        Object.keys(resolvedLinks[filePath]).forEach((linkInNote) => {
-          if (existingNotePathMap.has(linkInNote)) {
-            linksInNote.push(linkInNote);
-          }
-        });
-        if (linksInNote.length > 0) {
-          const file = yield this.app.vault.getAbstractFileByPath(filePath);
-          const content = yield this.app.vault.read(file);
-          linksInNote.forEach((link) => __async(this, null, function* () {
-            const note = existingNotePathMap.get(link);
-            const fullLink = note.file.path.replace(/\.\w+$/, "");
-            const re = new RegExp(`^- \\[x\\] .*\\[\\[(${fullLink}|${note.file.basename})\\]\\]`, "m");
-            if (content.match(re)) {
-              skipNotesSet.add(link);
-            }
-          }));
-        }
-      })));
-      const unprocessedNotes = existingNotes.filter((note) => {
-        return !skipNotesSet.has(note.file.path);
-      });
-      return unprocessedNotes;
-    });
-  }
-  writeNotes(notes, folder) {
-    return __async(this, null, function* () {
-      folder = this.convertObsidianPath(folder);
-      let existingNoteMap = new Map();
-      try {
-        var existingNotes = yield this.getExistingFleetingNotes(folder);
-        existingNotes.forEach((note2) => existingNoteMap.set(note2.frontmatter.id, note2));
-        var folderExists = yield this.app.vault.adapter.exists(folder);
-        if (!folderExists) {
-          yield this.app.vault.createFolder(folder);
-        }
-        for (var i = 0; i < notes.length; i++) {
-          var note = notes[i];
-          var title = note.title ? `${note.title}.md` : `${note._id}.md`;
-          var path = this.convertObsidianPath(pathJoin([folder, title]));
-          try {
-            var noteFile = existingNoteMap.get(note._id) || null;
-            const add_deleted = this.settings.sync_type === "one-way-delete";
-            var mdContent = this.getFilledTemplate(this.settings.note_template, note, add_deleted);
-            if (noteFile != null) {
-              yield this.app.vault.modify(noteFile.file, mdContent);
-              yield this.app.vault.rename(noteFile.file, path);
-            } else {
-              var delFile = this.app.vault.getAbstractFileByPath(path);
-              if (delFile != null) {
-                yield this.app.vault.delete(delFile);
-              }
-              yield this.app.vault.create(path, mdContent);
-            }
-          } catch (e) {
-            throwError(e, `Failed to write note "${path}" to Obsidian.
-
-${e.message}`);
-          }
-        }
-      } catch (e) {
-        throwError(e, "Failed to write notes to Obsidian");
-      }
-    });
-  }
-  getAllLinks() {
-    const unresolvedLinks = this.app.metadataCache.unresolvedLinks;
-    const resolvedLinks = this.app.metadataCache.resolvedLinks;
-    const allLinksSet = new Set();
-    for (const [file, links] of Object.entries(resolvedLinks)) {
-      const addLinkToSet = (link) => {
-        const cleanedLink = link.split("/").at(-1).replace(/\.md$/, "");
-        allLinksSet.add(cleanedLink);
-      };
-      addLinkToSet(file);
-      Object.keys(links).forEach(addLinkToSet);
-      Object.keys(unresolvedLinks[file]).forEach(addLinkToSet);
-    }
-    return [...allLinksSet];
-  }
-};
-var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
+var FleetingNotesSettingsTab = class extends import_obsidian2.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -4643,18 +4355,18 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
     let noteTemplateComponent;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Authentication" });
-    new import_obsidian.Setting(containerEl).setName("Email").setDesc("Email used to log into Fleeting Notes").addText((text) => text.setPlaceholder("Enter email").setValue(this.plugin.settings.username).onChange((value) => __async(this, null, function* () {
+    new import_obsidian2.Setting(containerEl).setName("Email").setDesc("Email used to log into Fleeting Notes").addText((text) => text.setPlaceholder("Enter email").setValue(this.plugin.settings.username).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.username = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian.Setting(containerEl).setName("Password").setDesc("Password used to log into Fleeting Notes").addText((text) => {
+    new import_obsidian2.Setting(containerEl).setName("Password").setDesc("Password used to log into Fleeting Notes").addText((text) => {
       text.setPlaceholder("Enter password").setValue(this.plugin.settings.password).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.password = value;
         yield this.plugin.saveSettings();
       }));
       text.inputEl.type = "password";
     });
-    new import_obsidian.Setting(containerEl).setName("Encryption key").setDesc("Encryption key used to encrypt notes").addText((text) => {
+    new import_obsidian2.Setting(containerEl).setName("Encryption key").setDesc("Encryption key used to encrypt notes").addText((text) => {
       text.setPlaceholder("Enter encryption key").setValue(this.plugin.settings.encryption_key).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.encryption_key = value;
         yield this.plugin.saveSettings();
@@ -4662,11 +4374,15 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
       text.inputEl.type = "password";
     });
     containerEl.createEl("h2", { text: "Sync Settings" });
-    new import_obsidian.Setting(containerEl).setName("Fleeting Notes folder location").setDesc("Files will be populated here from Fleeting Notes").addText((text) => text.setPlaceholder("Enter the folder location").setValue(this.plugin.settings.fleeting_notes_folder).onChange((value) => __async(this, null, function* () {
+    new import_obsidian2.Setting(containerEl).setName("Fleeting Notes folder location").setDesc("Files will be populated here from Fleeting Notes").addText((text) => text.setPlaceholder("Enter the folder location").setValue(this.plugin.settings.fleeting_notes_folder).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.fleeting_notes_folder = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian.Setting(containerEl).setName("Sync notes automatically").setDesc("Sync will be performed on startup and every 30 minutes").addToggle((tog) => tog.setValue(this.plugin.settings.sync_on_startup).onChange((val) => __async(this, null, function* () {
+    new import_obsidian2.Setting(containerEl).setName("Notes filter text").setDesc("Notes will only be imported if the title/content includes the text").addText((text) => text.setPlaceholder("ex. #work").setValue(this.plugin.settings.notes_filter).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.notes_filter = value;
+      yield this.plugin.saveSettings();
+    })));
+    new import_obsidian2.Setting(containerEl).setName("Sync notes automatically").setDesc("Sync will be performed on startup and every 30 minutes").addToggle((tog) => tog.setValue(this.plugin.settings.sync_on_startup).onChange((val) => __async(this, null, function* () {
       this.plugin.settings.sync_on_startup = val;
       if (val) {
         this.plugin.autoSync();
@@ -4675,7 +4391,7 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
       }
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian.Setting(containerEl).setName("Sync type:").addDropdown((dropdown) => dropdown.addOption("one-way", "One-way sync (FN \u21D2 Obsidian)").addOption("one-way-delete", "One-way sync (FN \u21D2 Obsidian) + Delete from FN").addOption("two-way", "Two-way sync (FN \u21D4 Obsidian)").setValue(this.plugin.settings.sync_type).onChange((value) => __async(this, null, function* () {
+    new import_obsidian2.Setting(containerEl).setName("Sync type:").addDropdown((dropdown) => dropdown.addOption("one-way", "One-way sync (FN \u21D2 Obsidian)").addOption("one-way-delete", "One-way sync (FN \u21D2 Obsidian) + Delete from FN").addOption("two-way", "Two-way sync (FN \u21D4 Obsidian)").setValue(this.plugin.settings.sync_type).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.sync_type = value;
       if (noteTemplateComponent) {
         if (value == "two-way") {
@@ -4688,8 +4404,8 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
       }
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian.Setting(containerEl).setName("Note Template").setDesc("Only editable in one-way sync");
-    new import_obsidian.Setting(containerEl).setHeading().addTextArea((t) => {
+    new import_obsidian2.Setting(containerEl).setName("Note Template").setDesc("Only editable in one-way sync");
+    new import_obsidian2.Setting(containerEl).setHeading().addTextArea((t) => {
       noteTemplateComponent = t;
       t.setValue(this.plugin.settings.note_template).onChange((val) => __async(this, null, function* () {
         this.plugin.settings.note_template = val;
@@ -4707,7 +4423,12 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
         this.display();
       });
     });
-    new import_obsidian.Setting(containerEl).setName("Copy Links to Clipboard").setDesc("Copy all Obsidian links to your clipboard").addButton((button) => {
+    new import_obsidian2.Setting(containerEl).setName("Auto-generate note title").setDesc("Will generate based on note content").addToggle((tog) => tog.setValue(this.plugin.settings.sync_on_startup).onChange((val) => __async(this, null, function* () {
+      this.plugin.settings.sync_on_startup = val;
+      val ? this.plugin.settings.auto_generate_title = true : this.plugin.settings.auto_generate_title = false;
+      yield this.plugin.saveSettings();
+    })));
+    new import_obsidian2.Setting(containerEl).setName("Copy Links to Clipboard").setDesc("Copy all Obsidian links to your clipboard").addButton((button) => {
       button.setTooltip("Copy links to clipboard").setIcon("copy").onClick(() => {
         const allLinks = this.plugin.getAllLinks();
         const allLinksStr = allLinks.map((link) => `[[${link}]]`).join(" ");
@@ -4716,6 +4437,10 @@ var FleetingNotesSettingTab = class extends import_obsidian.PluginSettingTab {
     });
   }
 };
+
+// src/utils.ts
+var import_obsidian3 = __toModule(require("obsidian"));
+var CryptoJS = require_crypto_js();
 function pathJoin(parts, sep = "/") {
   var separator = sep || "/";
   var replace = new RegExp(separator + "{1,}", "g");
@@ -4730,7 +4455,7 @@ function throwError(e, errMessage) {
   }
 }
 var firebaseUrl = "https://us-central1-fleetingnotes-22f77.cloudfunctions.net";
-var getAllNotesFirebase = (email, password, key) => __async(void 0, null, function* () {
+var getAllNotesFirebase = (email, password, key, filterKey) => __async(void 0, null, function* () {
   let notes = [];
   try {
     const base64Auth = btoa(`${email}:${password}`);
@@ -4739,15 +4464,18 @@ var getAllNotesFirebase = (email, password, key) => __async(void 0, null, functi
       url: `${firebaseUrl}/get_all_notes`,
       contentType: "application/json",
       headers: {
-        "Authorization": `Basic ${base64Auth}`,
+        Authorization: `Basic ${base64Auth}`,
         "hashed-encryption-key": key ? CryptoJS.SHA256(key).toString() : void 0
       }
     };
-    const res = JSON.parse(yield (0, import_obsidian.request)(config));
+    const res = JSON.parse(yield (0, import_obsidian3.request)(config));
     if (res.error) {
       throwError(Error(res.error), res.error);
     }
     notes = Array.from(res.map((note) => decryptNote(note, key)));
+    if (filterKey) {
+      notes = notes.filter((note) => note.title.includes(filterKey) || note.content.includes(filterKey));
+    }
     return notes;
   } catch (e) {
     throwError(e, "Failed to get notes from Fleeting Notes - Check your credentials");
@@ -4763,12 +4491,12 @@ var updateNotesFirebase = (email, password, key, notes) => __async(void 0, null,
       url: `${firebaseUrl}/update_notes`,
       contentType: "application/json",
       headers: {
-        "Authorization": `Basic ${base64Auth}`,
+        Authorization: `Basic ${base64Auth}`,
         "hashed-encryption-key": key ? CryptoJS.SHA256(key).toString() : void 0,
-        "notes": JSON.stringify(encryptedNotes)
+        notes: JSON.stringify(encryptedNotes)
       }
     };
-    const res = JSON.parse(yield (0, import_obsidian.request)(config));
+    const res = JSON.parse(yield (0, import_obsidian3.request)(config));
     if (res.error) {
       throwError(Error(res.error), res.error);
     }
@@ -4816,6 +4544,438 @@ var decryptText = (text, key) => {
 var encryptText = (text, key) => {
   var ciphertext = CryptoJS.AES.encrypt(text, key).toString();
   return ciphertext;
+};
+var extractAllTags = (text) => {
+  let tags = [];
+  let tagRegex = /(^|\B)#(?![0-9_]+\b)([a-zA-Z0-9_]{1,30})(\b|\r)/gm;
+  let matches = text.matchAll(tagRegex);
+  for (const match of matches) {
+    tags.push(`"${match[2]}"`);
+  }
+  return tags;
+};
+var getDefaultNoteTitle = (note, existingTitles, autoGenerateTitle) => {
+  if (!autoGenerateTitle) {
+    const newTitle2 = `${note._id}.md`;
+    existingTitles.push(newTitle2);
+    return newTitle2;
+  }
+  let title = note.content.substring(0, 40);
+  let cutByNewLine = false;
+  if (note.content.indexOf("\n") > 0 && note.content.indexOf("\n") < 40) {
+    title = note.content.substring(0, note.content.indexOf("\n"));
+    cutByNewLine = true;
+  }
+  title.replace(/([*'/\\<>?:|])/g, "");
+  if (!existingTitles.includes(title || `${title}.md`)) {
+    const newTitle2 = title.replace(/([*'/\\<>:?|])/g, "");
+    existingTitles.push(newTitle2);
+    return `${newTitle2}.md`;
+  }
+  const counter = existingTitles.filter((existingTitle) => {
+    return title === existingTitle;
+  }).length;
+  const newTitle = title + ` (${counter})`;
+  existingTitles.push(title);
+  return `${newTitle}.md`;
+};
+
+// src/main.ts
+var FleetingNotesPlugin = class extends import_obsidian4.Plugin {
+  onload() {
+    return __async(this, null, function* () {
+      yield this.loadSettings();
+      this.addCommand({
+        id: "sync-fleeting-notes",
+        name: "Sync Notes with Fleeting Notes",
+        callback: () => __async(this, null, function* () {
+          yield this.syncFleetingNotes();
+          new import_obsidian4.Notice("Fleeting Notes sync success!");
+        })
+      });
+      this.addCommand({
+        id: "get-unprocessed-notes",
+        name: "Insert Unprocessed Notes",
+        callback: () => __async(this, null, function* () {
+          this.insertUnprocessedNotes();
+        })
+      });
+      this.addCommand({
+        id: "insert-notes-containing",
+        name: "Insert All Notes Containing Specific Text",
+        callback: () => __async(this, null, function* () {
+          this.openInputModal("Insert All Notes Containing:", "Text", (result) => {
+            this.embedNotesWithText(result);
+          });
+        })
+      });
+      this.addSettingTab(new FleetingNotesSettingsTab(this.app, this));
+      if (this.settings.sync_on_startup) {
+        this.app.workspace.onLayoutReady(() => {
+          this.autoSync();
+        });
+      }
+    });
+  }
+  disableAutoSync() {
+    if (this.settings.sync_interval) {
+      clearInterval(this.settings.sync_interval);
+    }
+  }
+  autoSync(syncIntervalMin = 30) {
+    const syncIntervalMs = syncIntervalMin * 60 * 1e3;
+    this.disableAutoSync();
+    this.syncFleetingNotes();
+    this.settings.sync_interval = setInterval(this.syncFleetingNotes.bind(this), syncIntervalMs);
+  }
+  onunload() {
+    this.disableAutoSync();
+  }
+  loadSettings() {
+    return __async(this, null, function* () {
+      this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
+    });
+  }
+  saveSettings() {
+    return __async(this, null, function* () {
+      yield this.saveData(this.settings);
+    });
+  }
+  insertUnprocessedNotes() {
+    return __async(this, null, function* () {
+      try {
+        const template = "- [ ] ![[${linkText}]]\n";
+        const unprocessedNotes = yield this.getUnprocessedFleetingNotes(this.settings.fleeting_notes_folder);
+        const unprocessedNoteString = this.embedNotesToString(unprocessedNotes, this.app.workspace.getActiveFile().path, template);
+        this.appendStringToActiveFile(unprocessedNoteString);
+      } catch (e) {
+        if (typeof e === "string") {
+          new import_obsidian4.Notice(e);
+        } else {
+          console.error(e);
+          new import_obsidian4.Notice("Failed to insert unprocessed notes");
+        }
+      }
+    });
+  }
+  embedNotesWithText(text) {
+    return __async(this, null, function* () {
+      let sameSourceNotes = [];
+      try {
+        sameSourceNotes = yield this.getNotesWithText(this.settings.fleeting_notes_folder, text);
+        if (sameSourceNotes.length === 0) {
+          new import_obsidian4.Notice(`No notes with text "${text}" found`);
+          return;
+        }
+        const template = "![[${linkText}]]\n\n";
+        const sameSourceNoteString = this.embedNotesToString(sameSourceNotes, this.app.workspace.getActiveFile().path, template);
+        this.appendStringToActiveFile(sameSourceNoteString);
+        new import_obsidian4.Notice(`Notes with text "${text}" inserted`);
+      } catch (e) {
+        if (typeof e === "string") {
+          new import_obsidian4.Notice(e);
+        } else {
+          console.error(e);
+          new import_obsidian4.Notice(`Failed to embed notes with text: "${text}"`);
+        }
+      }
+    });
+  }
+  syncFleetingNotes() {
+    return __async(this, null, function* () {
+      try {
+        if (this.settings.sync_type === "two-way") {
+          yield this.pushFleetingNotes();
+        }
+        let notes = yield getAllNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key, this.settings.notes_filter);
+        notes = notes.filter((note) => !note._isDeleted);
+        yield this.writeNotes(notes, this.settings.fleeting_notes_folder);
+        if (this.settings.sync_type == "one-way-delete") {
+          yield this.deleteFleetingNotes(notes);
+        }
+        this.settings.last_sync_time = new Date();
+      } catch (e) {
+        if (typeof e === "string") {
+          new import_obsidian4.Notice(e);
+        } else {
+          console.error(e);
+          new import_obsidian4.Notice("Fleeing Notes sync failed - please check settings");
+        }
+      }
+    });
+  }
+  appendStringToActiveFile(content) {
+    return __async(this, null, function* () {
+      const active_view = this.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+      const editor = active_view.editor;
+      const doc = editor.getDoc();
+      doc.replaceSelection(content);
+    });
+  }
+  parseNoteFile(file) {
+    return __async(this, null, function* () {
+      var frontmatter = {};
+      var rawNoteContent = yield this.app.vault.read(file);
+      var content = rawNoteContent;
+      try {
+        var m = rawNoteContent.match(/^---\n([\s\S]*?)\n---\n/m);
+        if (m) {
+          frontmatter = (0, import_obsidian4.parseYaml)(m[1]);
+          content = content.replace(m[0], "");
+        }
+      } catch (e) {
+        console.error(e, `Failed to parse metadata for: "${file.path}"`);
+      }
+      return { frontmatter, content };
+    });
+  }
+  pushFleetingNotes() {
+    return __async(this, null, function* () {
+      try {
+        var modifiedNotes = yield this.getUpdatedLocalNotes(this.settings.fleeting_notes_folder);
+        var formattedNotes = yield Promise.all(modifiedNotes.map((note) => __async(this, null, function* () {
+          var { file, frontmatter, content } = note;
+          return {
+            _id: frontmatter.id,
+            title: frontmatter.title ? file.basename : "",
+            content: content || "",
+            source: frontmatter.source || "",
+            _isDeleted: frontmatter.deleted || false
+          };
+        })));
+        if (formattedNotes.length > 0) {
+          yield updateNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key, formattedNotes);
+          this.settings.last_sync_time = new Date();
+        }
+      } catch (e) {
+        throwError(e, "Failed to push notes from Obsidian to Fleeting Notes");
+      }
+    });
+  }
+  deleteFleetingNotes(notes) {
+    return __async(this, null, function* () {
+      try {
+        var notesToDelete = yield Promise.all(notes.map((note) => __async(this, null, function* () {
+          return {
+            _id: note._id,
+            _isDeleted: true
+          };
+        })));
+        if (notesToDelete.length > 0) {
+          yield updateNotesFirebase(this.settings.username, this.settings.password, this.settings.encryption_key, notesToDelete);
+        }
+      } catch (e) {
+        throwError(e, "Failed to delete notes from Fleeting Notes");
+      }
+    });
+  }
+  getExistingFleetingNotes(dir) {
+    return __async(this, null, function* () {
+      const noteList = [];
+      try {
+        var files = this.app.vault.getFiles();
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          var fileInDir = dir === "/" ? !file.path.contains("/") : file.path.startsWith(dir);
+          if (!fileInDir)
+            continue;
+          var file_id;
+          var { frontmatter, content } = yield this.parseNoteFile(file);
+          file_id = frontmatter.id || null;
+          if (file_id !== null) {
+            noteList.push({ file, frontmatter, content });
+          }
+        }
+      } catch (e) {
+        throwError(e, `Failed to get existing notes from obsidian`);
+      }
+      return noteList;
+    });
+  }
+  convertObsidianPath(path) {
+    path = path[0] === "/" ? path.replace("/", "") : path;
+    path = path || "/";
+    return path;
+  }
+  getFilledTemplate(template, note, add_deleted) {
+    const metadataMatch = template.match(/^---\n([\s\S]*?)\n---\n/m);
+    let content = note.content;
+    let tags = [];
+    if (template.includes("${tags}")) {
+      tags = extractAllTags(note.content);
+    }
+    if (metadataMatch) {
+      const escapedTitle = note.title.replace(/\"/g, '\\"');
+      const escapedContent = content.replace(/\"/g, '\\"');
+      const escapedSource = note.source.replace(/\"/g, '\\"');
+      const escapedTags = `[${tags.join(", ")}]`;
+      var newMetadata = metadataMatch[1].replace(/\$\{title\}/gm, escapedTitle).replace(/\$\{tags\}/gm, escapedTags).replace(/\$\{content\}/gm, escapedContent).replace(/\$\{source\}/gm, escapedSource);
+      if (add_deleted) {
+        const deleted_match = newMetadata.match(/^deleted:.*$/);
+        if (deleted_match) {
+          newMetadata = newMetadata.replace(deleted_match[0], "deleted: true");
+        } else {
+          newMetadata += "\ndeleted: true";
+        }
+      }
+      newMetadata = `---
+${newMetadata}
+---
+`;
+      template = template.replace(metadataMatch[0], newMetadata);
+    }
+    var newTemplate = template.replace(/\$\{id\}/gm, note._id).replace(/\$\{title\}/gm, note.title).replace(/\$\{datetime\}/gm, note.timestamp).replace(/\$\{tags\}/gm, `[${tags.join(", ")}]`).replace(/\$\{created_date\}/gm, (0, import_obsidian4.moment)(note.timestamp).local().format("YYYY-MM-DD")).replace(/\$\{last_modified_date\}/gm, (0, import_obsidian4.moment)(note.modified_timestamp).local().format("YYYY-MM-DD")).replace(/\$\{content\}/gm, content).replace(/\$\{source\}/gm, note.source);
+    return newTemplate;
+  }
+  getUpdatedLocalNotes(folder) {
+    return __async(this, null, function* () {
+      folder = this.convertObsidianPath(folder);
+      var existingNotes = yield this.getExistingFleetingNotes(folder);
+      var modifiedNotes = existingNotes.filter((note) => {
+        const { file, frontmatter } = note;
+        const isContentModified = new Date(file.stat.mtime) > this.settings.last_sync_time;
+        const isTitleChanged = frontmatter.title && frontmatter.title !== file.basename;
+        return isContentModified || isTitleChanged;
+      });
+      return modifiedNotes;
+    });
+  }
+  embedNotesToString(notes, sourcePath, template) {
+    let embedNotesString = "";
+    notes.forEach((note) => {
+      const linkText = this.app.metadataCache.fileToLinktext(note.file, sourcePath);
+      embedNotesString += template.replace("${linkText}", linkText);
+    });
+    return embedNotesString;
+  }
+  getUnprocessedFleetingNotes(folder) {
+    return __async(this, null, function* () {
+      folder = this.convertObsidianPath(folder);
+      let existingNotePathMap = new Map();
+      var existingNotes = yield this.getExistingFleetingNotes(folder);
+      existingNotes.forEach((note) => existingNotePathMap.set(note.file.path, note));
+      let skipNotesSet = new Set();
+      const resolvedLinks = this.app.metadataCache.resolvedLinks;
+      yield Promise.all(Object.keys(resolvedLinks).map((filePath) => __async(this, null, function* () {
+        if (existingNotePathMap.has(filePath))
+          return;
+        let linksInNote = [];
+        Object.keys(resolvedLinks[filePath]).forEach((linkInNote) => {
+          if (existingNotePathMap.has(linkInNote)) {
+            linksInNote.push(linkInNote);
+          }
+        });
+        if (linksInNote.length > 0) {
+          const file = yield this.app.vault.getAbstractFileByPath(filePath);
+          const content = yield this.app.vault.read(file);
+          linksInNote.forEach((link) => __async(this, null, function* () {
+            const note = existingNotePathMap.get(link);
+            const fullLink = note.file.path.replace(/\.\w+$/, "");
+            const re = new RegExp(`^- \\[x\\] .*\\[\\[(${fullLink}|${note.file.basename})\\]\\]`, "m");
+            if (content.match(re)) {
+              skipNotesSet.add(link);
+            }
+          }));
+        }
+      })));
+      const unprocessedNotes = existingNotes.filter((note) => {
+        return !skipNotesSet.has(note.file.path);
+      });
+      return unprocessedNotes;
+    });
+  }
+  getNotesWithText(folder, text) {
+    return __async(this, null, function* () {
+      folder = this.convertObsidianPath(folder);
+      let existingNotePathMap = new Map();
+      var existingNotes = yield this.getExistingFleetingNotes(folder);
+      existingNotes.forEach((note) => existingNotePathMap.set(note.file.path, note));
+      const textInMetaData = (note) => {
+        let hasSource = false;
+        if (note.frontmatter) {
+          Object.values(note.frontmatter).forEach((fm) => {
+            if (fm.toString().includes(text)) {
+              hasSource = true;
+            }
+          });
+        }
+        return hasSource;
+      };
+      const hasTextInContent = (note) => {
+        var _a;
+        return (_a = note.content) == null ? void 0 : _a.includes(text);
+      };
+      const notesWithSameSource = existingNotes.filter((note) => {
+        return textInMetaData(note) || hasTextInContent(note);
+      });
+      return notesWithSameSource;
+    });
+  }
+  writeNotes(notes, folder) {
+    return __async(this, null, function* () {
+      folder = this.convertObsidianPath(folder);
+      let existingNoteMap = new Map();
+      let existingTitles = [];
+      try {
+        var existingNotes = yield this.getExistingFleetingNotes(folder);
+        existingNotes.forEach((note2) => {
+          existingNoteMap.set(note2.frontmatter.id, note2);
+          existingTitles.push(note2.file.name);
+        });
+        var folderExists = yield this.app.vault.adapter.exists(folder);
+        if (!folderExists) {
+          yield this.app.vault.createFolder(folder);
+        }
+        for (var i = 0; i < notes.length; i++) {
+          var note = notes[i];
+          var title = note.title ? `${note.title}.md` : getDefaultNoteTitle(note, existingTitles, this.settings.auto_generate_title);
+          var path = this.convertObsidianPath(pathJoin([folder, title]));
+          if (!path.includes(".md")) {
+            path = path + ".md";
+          }
+          try {
+            var noteFile = existingNoteMap.get(note._id) || null;
+            const add_deleted = this.settings.sync_type === "one-way-delete";
+            var mdContent = this.getFilledTemplate(this.settings.note_template, note, add_deleted);
+            if (noteFile != null) {
+              yield this.app.vault.modify(noteFile.file, mdContent);
+              yield this.app.vault.rename(noteFile.file, path);
+            } else {
+              var delFile = this.app.vault.getAbstractFileByPath(path);
+              if (delFile != null) {
+                yield this.app.vault.delete(delFile);
+              }
+              yield this.app.vault.create(path, mdContent);
+            }
+          } catch (e) {
+            throwError(e, `Failed to write note "${path}" to Obsidian.
+
+${e.message}`);
+          }
+        }
+      } catch (e) {
+        throwError(e, "Failed to write notes to Obsidian");
+      }
+    });
+  }
+  getAllLinks() {
+    const unresolvedLinks = this.app.metadataCache.unresolvedLinks;
+    const resolvedLinks = this.app.metadataCache.resolvedLinks;
+    const allLinksSet = new Set();
+    for (const [file, links] of Object.entries(resolvedLinks)) {
+      const addLinkToSet = (link) => {
+        const cleanedLink = link.split("/").at(-1).replace(/\.md$/, "");
+        allLinksSet.add(cleanedLink);
+      };
+      addLinkToSet(file);
+      Object.keys(links).forEach(addLinkToSet);
+      Object.keys(unresolvedLinks[file]).forEach(addLinkToSet);
+    }
+    return [...allLinksSet];
+  }
+  openInputModal(title, label, onSubmit) {
+    new InputModal(this.app, title, label, onSubmit).open();
+  }
 };
 /** @preserve
 	(c) 2012 by Cédric Mesnil. All rights reserved.
