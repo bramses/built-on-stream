@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "731276f106214cb8",
+        "id": "1adf39a705abd963",
         "type": "tabs",
         "children": [
           {
-            "id": "e722869c957929e8",
+            "id": "16b29299b7c44970",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Can obsidian help us think like we do in physical space?.md",
+                "file": "A great time for developers to use really powerful technology for cheap.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Can obsidian help us think like we do in physical space?.md",
+                "file": "A great time for developers to use really powerful technology for cheap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Can obsidian help us think like we do in physical space?.md",
+                "file": "A great time for developers to use really powerful technology for cheap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Can obsidian help us think like we do in physical space?.md"
+                "file": "A great time for developers to use really powerful technology for cheap.md"
               }
             }
           },
@@ -154,20 +154,17 @@
     "direction": "horizontal",
     "width": 406.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "8deecd6e15373542",
   "lastOpenFiles": [
-    "Can obsidian help us think like we do in physical space?.md",
-    "Daily/2022-08-09.md",
-    "Dream Machine.md",
-    "Daily/show tasks.md",
-    "FleetingNotes/START HERE.md",
-    "Daily/2022-10-16.md",
-    "Attachments/Pasted Image 20221028135239_471.png",
-    "Attachments/Pasted image 20221028134138.png",
-    "Attachments/Pasted image 20221028134123.png",
-    "On interior design and talking heads on YouTube.md"
+    "Attachments/Pasted image 20221106171753.png",
+    "A great time for developers to use really powerful technology for cheap.md",
+    "Attachments/Pasted image 20221106171730.png",
+    "Attachments/Screenshot 2022-11-06 17-49-23.png",
+    "Attachments/Screenshot 2022-11-06 17-46-38.png",
+    "Why I put my Chrome History in my Obsidian Vault.md",
+    "history example.md",
+    "Attachments/Screenshot 2022-11-06 17-32-10.png",
+    "Attachments/Pasted image 20221106172344.png",
+    "How Revealed Preferences Create Better Apps.md"
   ]
 }
